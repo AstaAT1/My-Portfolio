@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Mobariki — Frontend Developer</title>
+    <meta name="description" content="Portfolio of Mohamed Mobariki — Frontend Developer & cybersecurity learner. React, Tailwind, animations, and things that make people say 'wait, how did you do that?'" />
+    <meta name="theme-color" content="#080808" />
+
+    <!-- Skip to main content for accessibility -->
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -100%;
+        left: 1rem;
+        padding: 0.5rem 1rem;
+        background: #efefef;
+        color: #080808;
+        font-size: 0.8rem;
+        border-radius: 0 0 6px 6px;
+        z-index: 9999;
+        transition: top 0.1s;
+      }
+      .skip-link:focus { top: 0; }
+    </style>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Space Grotesk (body) + JetBrains Mono (terminal/code elements) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
