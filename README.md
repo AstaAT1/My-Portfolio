@@ -4,9 +4,9 @@ NAME
   portfolio — one-page scrolling portfolio (monochrome + cyber vibe + motion)
 
 LINKS
-  Live Demo: <PUT_YOUR_DEPLOYED_URL_HERE>
+  Live Demo: <https://mohamed-mobariki.netlify.app/>
   GitHub:    https://github.com/AstaAT1
-  LinkedIn:  https://www.linkedin.com/in/mohamed-mobariki-9329b5318/
+
 
 REQUIREMENTS
   Node.js >= 18
