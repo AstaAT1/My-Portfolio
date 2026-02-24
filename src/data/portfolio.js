@@ -76,7 +76,7 @@ projects: [
       "A modern fashion store front-end with product browsing and a clean shopping experience. Built with React + Tailwind, with a focus on reusable components, responsive layout, and a scalable UI foundation.",
     image: images.fashe,
     stack: ["React", "Tailwind"],
-    links: { github: "https://github.com/AstaAT1/Fashe", live: "" },
+    links: { github: "https://github.com/AstaAT1/Fashe", live: "https://fashestore.netlify.app/" },
     funFact: "Designed to be extended with stock management, filtering, and checkout flows.",
   },
 ],
