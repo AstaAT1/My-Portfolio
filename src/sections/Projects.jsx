@@ -42,89 +42,157 @@ function TiltCard({ children, className = "" }) {
 
 // ── Project Card ──────────────────────────────────────────────────
 function ProjectCard({ project, index }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-60px" });
-    const { github, live } = project.links || {};
-    const isComing = !github && !live;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-60px" });
+  const { github, live } = project.links || {};
+  const isComing = !github && !live;
 
-    return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: (index % 2) * 0.1 }}
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{
+        duration: 0.55,
+        ease: [0.22, 1, 0.36, 1],
+        delay: (index % 2) * 0.1,
+      }}
+    >
+      <TiltCard>
+        <Card
+          className="h-full flex flex-col group relative overflow-hidden transition-all duration-200"
+          style={{
+            backgroundColor: "var(--card)",
+            borderColor: isComing ? "var(--border-subtle)" : "var(--border)",
+          }}
         >
-            <TiltCard>
-                <Card
-                    className="h-full flex flex-col group relative overflow-hidden transition-all duration-200"
-                    style={{ backgroundColor: "var(--card)", borderColor: isComing ? "var(--border-subtle)" : "var(--border)" }}
+          {/* Hover glow overlay */}
+          <motion.div
+            className="absolute inset-0 pointer-events-none rounded-xl"
+            style={{
+              background:
+                "radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 70%)",
+            }}
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          />
+
+          {/* ✅ Project Image */}
+          {project.image ? (
+            <div
+              className="relative w-full overflow-hidden border-b"
+              style={{ borderColor: "var(--border-subtle)" }}
+            >
+              <img
+                src={project.image}
+                alt={`${project.title} preview`}
+                loading="lazy"
+                className="h-40 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
+              />
+              {/* overlay for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+
+              {/* optional small label */}
+              <div className="absolute left-3 top-3 z-10 flex items-center gap-2">
+                {isComing && (
+                  <span className="term-chip" style={{ fontSize: "0.6rem" }}>
+                    <span className="prompt">$</span>{" "}
+                    <span className="val">in progress</span>
+                  </span>
+                )}
+              </div>
+            </div>
+          ) : null}
+
+          <CardHeader className="pb-3 relative z-10">
+            <div className="flex items-start justify-between gap-2 mb-2">
+              {/* إذا ماكانش image block فوق، بقا label هنا */}
+              {!project.image && isComing && (
+                <span className="term-chip" style={{ fontSize: "0.6rem" }}>
+                  <span className="prompt">$</span>{" "}
+                  <span className="val">in progress</span>
+                </span>
+              )}
+
+              {project.funFact && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      className="ml-auto p-1 rounded cursor-pointer transition-opacity hover:opacity-60"
+                      style={{ color: "var(--text-subtle)" }}
+                      aria-label="Show fun fact"
+                    >
+                      <Info size={12} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top">{project.funFact}</TooltipContent>
+                </Tooltip>
+              )}
+            </div>
+
+            <CardTitle className="t-small" style={{ color: "var(--text)" }}>
+              {project.title}
+            </CardTitle>
+            <CardDescription
+              className="t-small leading-relaxed mt-1"
+              style={{ color: "var(--text-muted)" }}
+            >
+              {project.description}
+            </CardDescription>
+          </CardHeader>
+
+          <CardContent className="flex flex-col flex-1 justify-between gap-4 pt-0 relative z-10">
+            <div className="flex flex-wrap gap-1.5">
+              {(project.stack || []).map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="t-mono"
+                  style={{ fontSize: "0.6rem" }}
                 >
-                    {/* Hover glow overlay */}
-                    <motion.div
-                        className="absolute inset-0 pointer-events-none rounded-xl"
-                        style={{ background: "radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 70%)" }}
-                        initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                        transition={{ duration: 0.2 }}
-                    />
+                  {tech}
+                </Badge>
+              ))}
+            </div>
 
-                    <CardHeader className="pb-3 relative z-10">
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                            {isComing && (
-                                <span className="term-chip" style={{ fontSize: "0.6rem" }}>
-                                    <span className="prompt">$</span> <span className="val">in progress</span>
-                                </span>
-                            )}
-                            {project.funFact && (
-                                <Tooltip>
-                                    <TooltipTrigger asChild>
-                                        <button className="ml-auto p-1 rounded cursor-pointer transition-opacity hover:opacity-60"
-                                            style={{ color: "var(--text-subtle)" }} aria-label="Show fun fact">
-                                            <Info size={12} />
-                                        </button>
-                                    </TooltipTrigger>
-                                    <TooltipContent side="top">{project.funFact}</TooltipContent>
-                                </Tooltip>
-                            )}
-                        </div>
-                        <CardTitle className="t-small" style={{ color: "var(--text)" }}>{project.title}</CardTitle>
-                        <CardDescription className="t-small leading-relaxed mt-1" style={{ color: "var(--text-muted)" }}>
-                            {project.description}
-                        </CardDescription>
-                    </CardHeader>
+            <div className="flex items-center gap-4 text-xs">
+              {github ? (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 hover:opacity-60 transition-opacity t-mono"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  <Github size={11} /> Code
+                </a>
+              ) : null}
 
-                    <CardContent className="flex flex-col flex-1 justify-between gap-4 pt-0 relative z-10">
-                        <div className="flex flex-wrap gap-1.5">
-                            {(project.stack || []).map((tech) => (
-                                <Badge key={tech} variant="outline" className="t-mono" style={{ fontSize: "0.6rem" }}>{tech}</Badge>
-                            ))}
-                        </div>
-                        <div className="flex items-center gap-4 text-xs">
-                            {github ? (
-                                <a href={github} target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 hover:opacity-60 transition-opacity t-mono"
-                                    style={{ color: "var(--text-muted)" }}>
-                                    <Github size={11} /> Code
-                                </a>
-                            ) : null}
-                            {live ? (
-                                <a href={live} target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 hover:opacity-60 transition-opacity t-mono"
-                                    style={{ color: "var(--text)" }}>
-                                    <ExternalLink size={11} /> Live
-                                </a>
-                            ) : null}
-                            {isComing && (
-                                <span className="t-mono" style={{ color: "var(--text-subtle)" }}>// coming soon</span>
-                            )}
-                        </div>
-                    </CardContent>
-                </Card>
-            </TiltCard>
-        </motion.div>
-    );
+              {live ? (
+                <a
+                  href={live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 hover:opacity-60 transition-opacity t-mono"
+                  style={{ color: "var(--text)" }}
+                >
+                  <ExternalLink size={11} /> Live
+                </a>
+              ) : null}
+
+              {isComing && (
+                <span className="t-mono" style={{ color: "var(--text-subtle)" }}>
+                  // coming soon
+                </span>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      </TiltCard>
+    </motion.div>
+  );
 }
-
 // ── Projects Section ──────────────────────────────────────────────
 export default function Projects() {
     return (

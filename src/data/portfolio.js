@@ -1,5 +1,5 @@
 // src/data/portfolio.js
-import profileImg from "../assets/images/profile.png";
+import images from "../context/image.jsx"
 
 export const portfolio = {
     // ── Flat convenience fields (used by Navbar, Hero, Footer) ──────
@@ -41,33 +41,45 @@ export const portfolio = {
     skills: {
         Frontend: ["HTML", "CSS", "Sass", "Bootstrap", "Tailwind CSS", "JavaScript", "React", "Framer Motion"],
         Backend: ["(soon) Node.js", "(soon) Express", "(soon) Databases", "(soon) SQL", "(soon) MongoDB", "(soon) PHP", "(soon) Laravel"],
-        Tools: ["C", "Bash", "n8n", "AI tools", "Networking fundamentals" , "Security fundamentals (ALX)" , "Linux" , "Git" , "GitHub"],
+        Tools: ["C", "Bash", "n8n", "AI tools", "Networking fundamentals" , "Security fundamentals " , "Linux" , "Git" , "GitHub"],
     },
 
     // ── Projects ────────────────────────────────────────────────────
-    projects: [
-        {
-            title: "Project #1 (Coming soon)",
-            description: "I'll add my best work here soon — with live demo and a clean README.",
-            stack: ["React", "Tailwind"],
-            links: { github: "", live: "" },
-            funFact: "Every senior dev's portfolio started with a coming-soon page too.",
-        },
-        {
-            title: "Project #2 (Coming soon)",
-            description: "A solid real-world project focusing on UI, performance, and a bit of animation.",
-            stack: ["JavaScript", "Framer Motion"],
-            links: { github: "", live: "" },
-            funFact: "It will have 100% Lighthouse score. (Aspirationally.)",
-        },
-        {
-            title: "Project #3 (Coming soon)",
-            description: "Something security/automation related (n8n / scripting) — stay tuned.",
-            stack: ["Bash", "n8n"],
-            links: { github: "", live: "" },
-            funFact: "If it involves automating something tedious, that's basically cybersecurity.",
-        },
-    ],
+projects: [
+  {
+    title: "Yalla Trip",
+    description:
+      "A Morocco-focused travel web app that blends trip discovery, traveler communities, a gear marketplace, and an AI travel assistant. Built with a clean responsive UI, dark/light mode, and localStorage-based auth & profiles.",
+    image: images.Yallatrip,
+    stack: ["React", "Tailwind", "Framer Motion"],
+    links: {
+      github: "https://github.com/AstaAT1/Yalla-Trip",
+      live: "https://yalla-trip.netlify.app/",
+    },
+    funFact: "Includes an AI travel chatbot for Morocco itineraries, routes, and packing tips.",
+  },
+  {
+    title: "LeetMovie",
+    description:
+      "A Netflix-inspired movie & TV discovery platform with a cinematic UI. Browse curated lists, open a details page, and explore content with smooth animations and a modern card-based layout.",
+    image: images.Leetmovie,
+    stack: ["React", "Tailwind", "Framer Motion"],
+    links: {
+      github: "https://github.com/AstaAT1/Movies-Site",
+      live: "https://leetmovie.netlify.app/",
+    },
+    funFact: "Focused on UI polish: micro-interactions, hover states, and premium motion transitions.",
+  },
+  {
+    title: "Fashe",
+    description:
+      "A modern fashion store front-end with product browsing and a clean shopping experience. Built with React + Tailwind, with a focus on reusable components, responsive layout, and a scalable UI foundation.",
+    image: images.fashe,
+    stack: ["React", "Tailwind"],
+    links: { github: "https://github.com/AstaAT1/Fashe", live: "" },
+    funFact: "Designed to be extended with stock management, filtering, and checkout flows.",
+  },
+],
 
     // ── Experience ──────────────────────────────────────────────────
     experience: [
@@ -95,6 +107,6 @@ export const portfolio = {
     // ── Extras ──────────────────────────────────────────────────────
     extras: {
         funFact: "I follow AI & security news like it's a sports league.",
-        avatarUrl: profileImg,
+        avatarUrl: images.profile,
     },
 };
