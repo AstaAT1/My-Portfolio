@@ -1,4 +1,5 @@
-$ cat README.md
+# My-Portfolio
+ $ cat README.md
 NAME
   portfolio — one-page scrolling portfolio (monochrome + cyber vibe + motion)
 
