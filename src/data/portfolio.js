@@ -39,7 +39,7 @@ export const portfolio = {
 
     // ── Skills (object form) ────────────────────────────────────────
     skills: {
-        Frontend: ["HTML", "CSS", "Sass", "Bootstrap", "Tailwind CSS", "JavaScript", "React", "Framer Motion"],
+        Frontend: ["HTML", "CSS", "Sass", "Bootstrap", "Tailwind CSS", "JavaScript", "React", "Framer Motion" , "(soon) TypeScript" , "(soon) Next.js" , "(soon) React Native"],
         Backend: ["(soon) Node.js", "(soon) Express", "(soon) Databases", "(soon) SQL", "(soon) MongoDB", "(soon) PHP", "(soon) Laravel"],
         Tools: ["C", "Bash", "n8n", "AI tools", "Networking fundamentals" , "Security fundamentals " , "Linux" , "Git" , "GitHub"],
     },
