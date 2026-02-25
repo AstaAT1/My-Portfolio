@@ -18,7 +18,7 @@ const templateParams = {
   message,
   time: new Date().toLocaleString(),
   title: `Message from ${name}`,
-  avatar_url, // ✅ this is what your template needs
+  avatar_url,
 };
 
   return emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, { publicKey: PUBLIC_KEY });

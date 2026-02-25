@@ -43,7 +43,7 @@ export default function Contact() {
     name: "",
     email: "",
     message: "",
-    website: "", // honeypot (hidden)
+    website: "", 
   });
 
   const [sent, setSent] = useState(false);
@@ -57,7 +57,7 @@ export default function Contact() {
     setError("");
     setSent(false);
 
-    // honeypot: bots often fill hidden fields
+   
     if (state.website) {
       setSent(true);
       return;
@@ -172,7 +172,7 @@ export default function Contact() {
             noValidate
             aria-label="Contact form"
           >
-            {/* honeypot (hidden) */}
+          
             <input
               type="text"
               name="website"
