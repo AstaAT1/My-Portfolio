@@ -1,4 +1,4 @@
-import profile from "../assets/images/profile.png";
+import profile from "../assets/images/headshot_1x1_safe.png";
 import fashe from "../assets/images/Screenshot from 2026-02-24 20-50-35.png"
 import Leetmovie from "../assets/images/Screenshot from 2026-02-24 17-59-51.png"
 import Yallatrip from "../assets/images/Screenshot from 2026-02-24 18-00-32.png"
