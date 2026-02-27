@@ -54,7 +54,7 @@ projects: [
     stack: ["React", "Tailwind", "Framer Motion"],
     links: {
       github: "https://github.com/AstaAT1/Yalla-Trip",
-      live: "https://yalla-trip.netlify.app/",
+      live: "https://yallatrip.netlify.app/",
     },
     funFact: "Includes an AI travel chatbot for Morocco itineraries, routes, and packing tips.",
   },
@@ -66,7 +66,7 @@ projects: [
     stack: ["React", "Tailwind", "Framer Motion"],
     links: {
       github: "https://github.com/AstaAT1/Movies-Site",
-      live: "https://leetmovie.netlify.app/",
+      live: "https://leet-movie.netlify.app/",
     },
     funFact: "Focused on UI polish: micro-interactions, hover states, and premium motion transitions.",
   },
@@ -76,7 +76,7 @@ projects: [
       "A modern fashion store front-end with product browsing and a clean shopping experience. Built with React + Tailwind, with a focus on reusable components, responsive layout, and a scalable UI foundation.",
     image: images.fashe,
     stack: ["React", "Tailwind"],
-    links: { github: "https://github.com/AstaAT1/Fashe", live: "https://fashestore.netlify.app/" },
+    links: { github: "https://github.com/AstaAT1/Fashe", live: "https://fashe-store.netlify.app/" },
     funFact: "Designed to be extended with stock management, filtering, and checkout flows.",
   },
 ],
