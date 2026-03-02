@@ -4,7 +4,7 @@ NAME
   portfolio — one-page scrolling portfolio (monochrome + cyber vibe + motion)
 
 LINKS
-  Live Demo: <https://mohamed-mobariki.netlify.app/>
+  Live Demo: <https://my-portfolio-n00o5vozt-astaat1s-projects.vercel.app/>
   GitHub:    https://github.com/AstaAT1
 
 
