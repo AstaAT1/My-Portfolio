@@ -36,7 +36,7 @@ function ParticleField() {
 
     const ref = useRef();
     useFrame((state) => {
-        if (REDUCED || !ref.current) return;
+        if (REDUCED || !ref.current) return; 
         ref.current.rotation.y = state.clock.elapsedTime * 0.015;
     });
 

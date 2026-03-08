@@ -73,12 +73,25 @@ projects: [
   {
     title: "Fashe",
     description:
-      "A modern fashion store front-end with product browsing and a clean shopping experience. Built with React + Tailwind, with a focus on reusable components, responsive layout, and a scalable UI foundation.",
+      "A modern fashion store front-end with product browsing and a clean shopping experience. Built with React + Tailwind + TypeScript, with a focus on reusable components, responsive layout, and a scalable UI foundation.",
     image: images.fashe,
-    stack: ["React", "Tailwind"],
+    stack: ["React", "Tailwind" , "JavaScript"],
     links: { github: "https://github.com/AstaAT1/Fashe", live: "https://fashe-store.netlify.app/" },
     funFact: "Designed to be extended with stock management, filtering, and checkout flows.",
   },
+{
+  title: "Best Football Formation",
+  description:
+    "An interactive football quiz + draft game where every round mixes timed trivia, player choices, and squad strategy. Build your best 4-3-3 formation, handle changement rounds and card penalties, then discover hidden player ratings in a cinematic final showdown.",
+  image: images.BestFootballFormatiom,
+  stack: ["React", "Tailwind", "Framer Motion"],
+  links: {
+    github: "https://github.com/AstaAT1/Best-football-formation",
+    live: "https://bestfootballformation.vercel.app/",
+  },
+  funFact:
+    "The final result is revealed like a football broadcast, with player-by-player comparisons before showing the full lineup.",
+},
 ],
 
     // ── Experience ──────────────────────────────────────────────────
