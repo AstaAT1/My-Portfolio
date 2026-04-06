@@ -32,7 +32,7 @@ export default function Skills() {
                     </RevealItem>
                     <RevealItem>
                         <p className="t-small t-mono" style={{ color: "var(--text-subtle)" }}>
-                            // Backend is "(soon)" — I&apos;m honest like that.
+                            // From UI to API — I build both sides now.
                         </p>
                     </RevealItem>
                 </RevealGroup>
