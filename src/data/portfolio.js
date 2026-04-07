@@ -40,8 +40,23 @@ export const portfolio = {
   // ── Skills (object form) ────────────────────────────────────────
   skills: {
     Frontend: ["HTML", "CSS", "Sass", "Bootstrap", "Tailwind CSS", "JavaScript", "React", "Framer Motion", "React Native", "(soon) TypeScript", "(soon) Next.js"],
-    Backend: ["(soon) Node.js", "Databases", "MySQL", "MongoDB", "PHP", "Laravel", "API"],
-    Tools: ["C", "Bash", "n8n", "AI tools", "Networking fundamentals", "Security fundamentals ", "Linux", "Vim", "Git", "GitHub", "GitLab"],
+    Backend: ["Node.js", "Databases", "MySQL", "MongoDB","Express.js","Authentication", "PHP", "Laravel", "API"],
+    Tools: ["C", "Bash", "n8n", "AI tools","Linux", "Vim", "Git", "GitHub", "GitLab"],
+     Cybersecurity: [
+      "Linux Fundamentals",
+      "Networking Basics",
+      "Web Security Fundamentals",
+      "OWASP Top 10",
+      "XSS",
+      "IDOR",
+      "Path Traversal",
+      "CTF Practice",
+    ],
+      SoftSkills: [
+      "Problem Solving",
+      "Time Management",
+      "Team Collaboration",
+    ],
   },
 
   // ── Projects ────────────────────────────────────────────────────
@@ -57,6 +72,19 @@ export const portfolio = {
         live: "https://yallatrip.netlify.app/",
       },
       funFact: "Includes an AI travel chatbot for Morocco itineraries, routes, and packing tips.",
+    },
+       {
+      title: "SafeTech Morocco",
+      description:
+        "A full-stack cybersecurity platform built with the MERN stack to provide cybersecurity threat intelligence and Morocco-focused security guidance. The platform includes secure authentication, content management, and an admin dashboard for full control over users and site settings.",
+      image: images.SafeTechMorocco,
+      stack: ["React", "Node.js", "Express.js", "MongoDB", "Vercel", "AI Tools"],
+      links: {
+        github: "https://github.com/0xm7d",
+        live: "https://www.safetech.tech/",
+      },
+      funFact:
+        "Integrated AI-powered services for image generation and news analysis to improve user engagement.",
     },
     {
       title: "LeetMovie",
