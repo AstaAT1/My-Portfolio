@@ -39,7 +39,7 @@ export const portfolio = {
 
   // ── Skills (object form) ────────────────────────────────────────
   skills: {
-    Frontend: ["HTML", "CSS", "Sass", "Bootstrap", "Tailwind CSS", "JavaScript", "React", "Framer Motion", "React Native", "(soon) TypeScript", "(soon) Next.js"],
+    Frontend: ["HTML", "CSS", "Sass", "Bootstrap", "Tailwind CSS", "JavaScript", "React", "Framer Motion", "React Native", "Expo" , "(soon) TypeScript", "(soon) Next.js"],
     Backend: ["Node.js", "Databases", "MySQL", "MongoDB","Express.js","Authentication", "PHP", "Laravel", "API"],
     Tools: ["C", "Bash", "n8n", "AI tools","Linux", "Vim", "Git", "GitHub", "GitLab"],
      Cybersecurity: [
@@ -73,6 +73,18 @@ export const portfolio = {
       },
       funFact: "Includes an AI travel chatbot for Morocco itineraries, routes, and packing tips.",
     },
+   {
+  title: "CIM Bank",
+  description:
+    "A full-stack fintech banking platform inspired by modern digital banks. CIM Bank provides secure user accounts, cards management, real-time transactions, and role-based access control. It includes a production-ready backend with Laravel and SQLite, and a clean responsive UI built for scalability and real-world banking simulation.",
+  image: images.CimBank,
+  stack: ["React", "Tailwind", "Framer Motion", "Laravel", "PHP", "SQLite", "REST API"],
+  links: {
+    github: "https://github.com/AstaAT1/CIM-BANK",
+    live: "https://cim-bank-production.up.railway.app",
+  },
+  funFact: "Includes a production demo seeder that fully simulates real banking data (users, accounts, cards, transactions).",
+},
        {
       title: "SafeTech Morocco",
       description:
