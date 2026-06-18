@@ -39,9 +39,10 @@ export const portfolio = {
 
   // ── Skills (object form) ────────────────────────────────────────
   skills: {
-    Frontend: ["HTML", "CSS", "Sass", "Bootstrap", "Tailwind CSS", "JavaScript", "React", "Framer Motion", "React Native", "Expo" , "(soon) TypeScript", "(soon) Next.js"],
-    Backend: ["Node.js", "Databases", "MySQL", "MongoDB","Express.js","Authentication", "PHP", "Laravel", "API"],
-    Tools: ["C", "Bash", "n8n", "AI tools","Linux", "Vim", "Git", "GitHub", "GitLab"],
+    Frontend: ["HTML","CSS","Sass","Bootstrap","Tailwind CSS","JavaScript","TypeScript","React","React Native","Expo","Inertia.js","Framer Motion"],
+    Backend: ["PHP","Laravel","Node.js","Express.js","REST API","Laravel Sanctum","Authentication Systems","Laravel Reverb","WebSockets","Redis","Laravel Queues"],
+    Databases: ["MySQL","MongoDB","SQLite","Database Design"],
+    Tools: ["Git","GitHub","GitLab","Linux","Bash","C" ,"Postman","Vite","npm","Composer","Vim","n8n","AI-assisted Development"],
      Cybersecurity: [
       "Linux Fundamentals",
       "Networking Basics",
@@ -132,6 +133,29 @@ export const portfolio = {
       funFact:
         "The final result is revealed like a football broadcast, with player-by-player comparisons before showing the full lineup.",
     },
+    {
+title: "Ahsan Khota",
+description:
+"A mobile-first football quiz and draft arena game built with Expo React Native and Laravel. Players answer football questions, win rounds, draft players, and build the strongest final squad. The app includes guest/auth accounts, team-name identity, friend-code multiplayer, public matchmaking, realtime room updates, presence tracking, reconnect handling, manual forfeit, and match history foundations.",
+image: images.AhsanKhota,
+stack: [
+"React Native",
+"Expo",
+"TypeScript",
+"Laravel",
+"PHP",
+"MySQL",
+"Redis",
+"Reverb",
+"REST API"
+],
+links: {
+github: "https://github.com/AstaAT1/Best-football-formation-version-mobile",
+live: "",
+},
+funFact:
+"Built with realtime multiplayer using Laravel Reverb, including presence, reconnect recovery, claim-win logic, and public matchmaking.",
+},
   ],
 
   // ── Experience ──────────────────────────────────────────────────

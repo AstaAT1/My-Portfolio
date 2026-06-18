@@ -6,6 +6,7 @@ import portfolio  from "../assets/images/Screenshot from 2026-02-27 13-49-37.png
 import BestFootballFormatiom from "../assets/images/Screenshot from 2026-03-08 04-41-39.png"
 import SafeTechMorocco from "../assets/images/Screenshot from 2026-04-07 01-25-42.png"
 import CimBank from "../assets/images/Screenshot from 2026-05-12 12-21-02.png"
+import AhsanKhota from "../assets/images/Screenshot from 2026-06-18 12-02-40.png";
 const images = {
   profile,
   Yallatrip,
@@ -15,6 +16,7 @@ const images = {
   BestFootballFormatiom,
   SafeTechMorocco,
   CimBank,
+  AhsanKhota,
 };
 
 export default images;
